@@ -839,11 +839,11 @@ module.exports = (Commands, Cypress, cy, state, config) => {
         const existingHash = remote.hash || ''
         const existingAuth = remote.auth || ''
 
-        if (previousDomainVisited && (remote.originPolicy !== existing.originPolicy)) {
+        //if (previousDomainVisited && (remote.originPolicy !== existing.originPolicy)) {
           // if we've already visited a new superDomain
           // then die else we'd be in a terrible endless loop
-          return cannotVisitDifferentOrigin(remote.origin, previousDomainVisited, remote, existing, options._log)
-        }
+        //  return cannotVisitDifferentOrigin(remote.origin, previousDomainVisited, remote, existing, options._log)
+        //}
 
         const current = $Location.create(win.location.href)
 
